@@ -1,0 +1,38 @@
+/* src/styles/Open.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+.homebg {
+  font-family: Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover; /* Ensure the image scales to cover the area */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center; /* Center the image */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.content {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem; /* Increase the font size */
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.5rem; /* Adjust the paragraph font size if needed */
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
