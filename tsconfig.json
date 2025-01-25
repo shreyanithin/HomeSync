@@ -3,5 +3,13 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "strict": true, // Enables strict type checking
+    "jsx": "react", // Use "react" or "react-jsx" depending on React version
+    "esModuleInterop": true, // Ensure proper module resolution
+    "resolveJsonModule": true, // Required for JSON imports
+    "moduleResolution": "node", // Ensure Node module resolution
+    "skipLibCheck": true // Optional: Skips library checks if you face issues with type declarations
+  }
 }
