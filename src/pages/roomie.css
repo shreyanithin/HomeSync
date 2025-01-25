@@ -1,0 +1,44 @@
+.roommate-listing-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .roommate-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .roommate-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .roommate-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .roommate-card p {
+    font-size: 1em;
+    color: #555;
+  }
+  
