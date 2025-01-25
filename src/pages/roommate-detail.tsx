@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './roommate-detail.css';
 
 interface RoommateDetailProps {
   name: string;
@@ -15,12 +14,10 @@ interface RoommateDetailProps {
 const RoommateDetail: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const roommate = location.state as RoommateDetailProps;
 
-  const handleChat = () => {
-    alert(`Starting chat with ${roommate.name}`);
-    // Implement actual chat functionality here
+  const goToChat = () => {
+    navigate('/chat', { state: roommate });
   };
 
   return (
@@ -33,10 +30,9 @@ const RoommateDetail: React.FC = () => {
       <p><strong>Occupation:</strong> {roommate.occupation}</p>
       <p><strong>Description:</strong> {roommate.description}</p>
       <p><strong>Email:</strong> {roommate.email}</p>
-      <div className="button">
-      <button onClick={handleChat} className="chat-button">Chat</button>
+
+      <button onClick={goToChat} className="chat-button">Chat with {roommate.name}</button>
       <button onClick={() => navigate(-1)} className="back-button">Go Back</button>
-      </div>
     </div>
   );
 };
