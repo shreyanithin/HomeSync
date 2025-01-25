@@ -22,7 +22,7 @@
   }
   
   .button-container .btn {
-    background-color: #4CAF50;
+    background-color: #86565d;
     color: white;
     padding: 10px 20px;
     margin: 0 10px;
@@ -34,13 +34,14 @@
   }
   
   .button-container .btn:hover {
-    background-color: #45a049;
+    background-color: #9c2641;
   }
   
   /* Grid container for properties */
   .property-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     justify-content: center;
@@ -81,11 +82,6 @@
   }
   .property-details .typeprice {
     text-align: center;
-    /*
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;*/
   }
   
   .property-details .property-type {
@@ -111,7 +107,7 @@
   }
   
   .schedule-visit {
-    background-color: #4CAF50;
+    background-color: #482d2d;
     color: white;
     padding: 10px 20px;
     font-size: 1.1rem;
@@ -124,7 +120,7 @@
   }
   
   .schedule-visit:hover {
-    background-color: #45a049;
+    background-color: #381622;
   }
   
   /* Pagination styles */
@@ -146,13 +142,31 @@
   }
   
   .pagination .page-link:hover {
-    background-color: #4CAF50;
+    background-color: #33151d;
     color: white;
   }
   
   .pagination .page-link:active {
-    background-color: #45a049;
+    background-color: #311525;
   }
+
+  /* Filter buttons */
+.button-container .btn {
+    background-color: #86565d;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container .btn:hover {
+    background-color: #9c2641;
+  }
+  
   
   /* Add responsive design for smaller screens */
   @media (max-width: 768px) {

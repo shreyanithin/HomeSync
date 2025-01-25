@@ -62,7 +62,7 @@ const RoomieListing: React.FC = () => {
   return (
     <div className="roommate-listing-container">
       <h1 className="title">Find a Roommate</h1>
-      <input
+      <input 
         type="text"
         placeholder="Search by name, city, or occupation"
         value={searchQuery}

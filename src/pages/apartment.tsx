@@ -1,9 +1,6 @@
-// src/pages/Apartment.tsx
+import React, { useState } from 'react';
+import './apartment.css';
 
-import React from 'react';
-import './apartment.css';  // Make sure to have the correct path to the CSS file
-
-// Import images directly for static assets
 import villa1 from '../assets/pg3v1.jpg';
 import villa2 from '../assets/pg3v2.jpg';
 import villa3 from '../assets/pg3v3.jpg';
@@ -24,11 +21,13 @@ interface Property {
 }
 
 const Apartment: React.FC = () => {
+  const [selectedType, setSelectedType] = useState<string>('All');
+
   const properties: Property[] = [
     {
-      Image: villa1,  // Use the imported image here
+      Image: villa1, 
       Type: "Luxury Villa",
-      price: "$2.264.000",
+      price: "$2,264.000",
       Address: "18 Old Street Miami,OR 97219",
       Bedrooms: 8,
       Bathrooms: 8,
@@ -37,9 +36,9 @@ const Apartment: React.FC = () => {
       Parking: 6,
     },
     {
-      Image: villa2,  // Use the imported image here
+      Image: villa2, 
       Type: "Luxury Villa",
-      price: "$1.180.000",
+      price: "$1,180.000",
       Address: "54 New Street Florida,OR 27001",
       Bedrooms: 6,
       Bathrooms: 5,
@@ -48,9 +47,9 @@ const Apartment: React.FC = () => {
       Parking: 8,
     },
     {
-      Image: villa3,  // Use the imported image here
+      Image: villa3,  
       Type: "Luxury Villa",
-      price: "$1.460.000",
+      price: "$1,460.000",
       Address: "26 Mid Street Portland,OR 38540",
       Bedrooms: 5,
       Bathrooms: 4,
@@ -59,7 +58,7 @@ const Apartment: React.FC = () => {
       Parking: 10,
     },
     {
-      Image: apartment1,  // Use the imported image here
+      Image: apartment1,  
       Type: "Apartment",
       price: "$584.500",
       Address: "12 Hope Street Portland,OR 12650",
@@ -70,7 +69,7 @@ const Apartment: React.FC = () => {
       Parking: "2 cars",
     },
     {
-      Image: penthouse1,  // Use the imported image here
+      Image: penthouse1, 
       Type: "Penthouse",
       price: "$925.600",
       Address: "34 Hope Street Portland,OR 42680",
@@ -81,7 +80,7 @@ const Apartment: React.FC = () => {
       Parking: "2 cars",
     },
     {
-      Image: condo1,  // Use the imported image here
+      Image: condo1,  
       Type: "Modern condo",
       price: "$450.000",
       Address: "22 Hope Street Portland,OR 16540",
@@ -93,20 +92,30 @@ const Apartment: React.FC = () => {
     },
   ];
 
+  const handleFilterChange = (type: string) => {
+    setSelectedType(type);
+  };
+
+  // Filter properties based on the selected type
+  const filteredProperties = selectedType === 'All' 
+    ? properties 
+    : properties.filter(property => property.Type === selectedType);
+
   return (
     <div className="apartment-container">
       <div className="header">
         <h1>Properties</h1>
         <div className="button-container">
-          <ul className="btn">Show All</ul>
-          <ul className="btn">Apartment</ul>
-          <ul className="btn" id="vil">Villa</ul>
-          <ul className="btn">Penthouse</ul>
+          <ul className="btn" onClick={() => handleFilterChange('All')}>Show All</ul>
+          <ul className="btn" onClick={() => handleFilterChange('Apartment')}>Apartment</ul>
+          <ul className="btn" onClick={() => handleFilterChange('Luxury Villa')}>Villa</ul>
+          <ul className="btn" onClick={() => handleFilterChange('Penthouse')}>Penthouse</ul>
+          <ul className="btn" onClick={() => handleFilterChange('Modern condo')}>Condo</ul>
         </div>
       </div>
 
       <div className="property-grid">
-        {properties.map((property, index) => (
+        {filteredProperties.map((property, index) => (
           <div key={index} className="property-card">
             <img src={property.Image} alt={property.Type} className="property-image" />
             <div className="property-details">
