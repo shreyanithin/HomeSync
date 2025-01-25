@@ -1,19 +1,24 @@
 // src/components/Navigation.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from '../styles/Open.module.css';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  showLoginButton?: boolean;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ showLoginButton = true }) => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        {/* Add more links here as you develop more pages */}
-      </ul>
+    <nav className={styles.navbar}>
+      <button className={styles.navButton}>
+        <Link to="/" className={styles.navLink}>Home</Link>
+      </button>
+      {showLoginButton && (
+        <button className={styles.navButton}>
+          <Link to="/login" className={styles.navLink}>Login</Link>
+        </button>
+      )}
+      {/* Add more buttons here as you develop more pages */}
     </nav>
   );
 };

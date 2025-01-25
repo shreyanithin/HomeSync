@@ -1,4 +1,5 @@
-/* src/components/Login.module.css */
+/* Login.css */
+
 .homebg {
   font-family: Arial, sans-serif;
   background: url('https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
@@ -16,7 +17,7 @@
 }
 
 .homeh1 {
-  color: #331a08; /* Text color */
+  color: #263c3b; /* Text color */
   font-size: 2.5rem; /* Font size */
   text-align: center; /* Center-align text */
   font-family: 'Georgia', 'Times New Roman', serif; /* Font family */
@@ -26,33 +27,38 @@
   letter-spacing: 1.5px; /* Optional: Add spacing between letters */
 }
 
-.form {
-  background: rgba(255, 255, 255, 0.5); /* Slight transparency for better readability */
-  backdrop-filter: blur(10px);
+
+form {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
-.form div {
+
+form div {
   margin-bottom: 15px;
 }
-.form label {
+
+label {
   display: block;
   margin-bottom: 5px;
   color: #000000;
   font-weight: bold;
 }
-.form input {
+
+input {
   width: 100%;
   padding: 10px;
+
   border: 1px solid hwb(0 0% 100%);
   background-color: #878076;
   border-radius: 4px;
   box-sizing: border-box;
 }
-.form button {
-  width: 100%; /* Adjusted width for single button */
+
+button {
+  width: 48%; /* Reduced width to fit two buttons side by side */
   padding: 10px;
   background-color: #007bff;
   color: white;
@@ -60,21 +66,22 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-right: 4%; /* Add spacing between the buttons */
 }
-.form button:hover {
+
+button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+  background-color: #28a745;
+}
+
+button:hover {
   background-color: #0056b3;
 }
 
-.signupLink {
-  margin-top: 20px;
-  text-align: center;
+button:last-child:hover {
+  background-color: #218838;
 }
 
-.signupLink a {
-  color: blue;
-  text-decoration: none;
-}
-
-.signupLink a:hover {
-  text-decoration: underline;
+br {
+  margin-bottom: 15px;
 }

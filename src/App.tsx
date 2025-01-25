@@ -1,26 +1,33 @@
+// src/App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/home';  // Ensure you have a home component in the `pages` folder
-import RoomieListing from './pages/roomie';  // This imports RoomieListing from roomie.tsx
-import RoommateDetail from './pages/roommate-detail';  // This imports RoommateDetail from roommate-detail.tsx
-import Apartment from './pages/apartment';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import OpenPage from './pages/open';
+import LoginPage from './pages/loginpage';
+import SignupPage from './pages/signuppage';
+import Navigation from './components/navigation';
+
+
+const NavigationWrapper: React.FC = () => {
+  const location = useLocation();
+  const isLoginPage = location.pathname === '/login';
+  const isSignupPage = location.pathname === '/signup';
+
+  return (
+    <Navigation showLoginButton={!isLoginPage && !isSignupPage} />
+  );
+};
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <NavigationWrapper />
         <Routes>
-          {/* Route for the home page */}
-          <Route path="/" element={<Home />} />
-
-          {/* Route for RoomieListing (roomie.tsx) */}
-          <Route path="/roommate-listing" element={<RoomieListing />} />
-
-          {/* Route for RoommateDetail (roommate-detail.tsx) */}
-          <Route path="/roommate-detail" element={<RoommateDetail />} />
-
-          <Route path="/apartment" element={<Apartment />} />
-
+          <Route path="/" element={<OpenPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          
+          {/* Add more routes here as you develop more pages */}
         </Routes>
       </div>
     </Router>
