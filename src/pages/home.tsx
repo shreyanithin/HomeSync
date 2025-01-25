@@ -1,14 +1,25 @@
 // src/Home.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './home.css';
 
+//import Apartment from './pages/Apartment';  // Correct path to Apartment component
+//import RoomieListing from './pages/roomie';
+
+
 const Home: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-page">
       <h1>What are you looking for?</h1><br />
-      <h2>Find a roomie</h2><br />
-        <h2>Find an apartment</h2>
+      <button className="navigate-btn" onClick={() => navigate('/roommate-listing')}>
+        Find a Roomie
+      </button><br /><br />
+
+      {/* Button to navigate to Apartment page */}
+      <button className="navigate-btn" onClick={() => navigate('/apartment')}>
+        Find an Apartment
+      </button>
     </div>
   );
 };

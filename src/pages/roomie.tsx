@@ -13,7 +13,7 @@ interface Roommate {
 const RoomieListing: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const [roommates, setRoommates] = useState<Roommate[]>([
+  const [roommates] = useState<Roommate[]>([
     {
       name: 'John Doe',
       age: 25,
