@@ -1,15 +1,41 @@
 /* src/Home.css */
+body{
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-image: url('../assets/homebg.jpg');
+  position: absolute; 
+  width: 100%; 
+  background-position: center; 
+  z-index: -1; 
+  background-size: cover ;
+}
 
-
+  .home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
   
   .home-page h1 {
     font-size: 3rem;
-    color: #d2cccc;
+    color: #340808;
   }
   
   .home-page h2 {
     font-size: 1.2rem;
     color: #d2cccc;
     margin-top: 10px;
+  }
+  .button{
+    display: flex;
+    justify-content: space-between;
   }
   

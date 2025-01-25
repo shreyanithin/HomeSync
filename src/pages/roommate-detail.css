@@ -1,0 +1,43 @@
+/* Assuming this is in your RoommateDetail component's CSS file */
+.roommate-detail-container {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    padding: 20px;
+    border-radius: 10px; /* Optional: for rounded corners */
+    max-width: 600px; /* Optional: Set a max width for better appearance */
+    margin: 20px auto; /* Center the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: to add a shadow effect */
+  }
+  
+  .roommate-detail-container h1 {
+    font-size: 2rem;
+    color: #340808;
+  }
+  
+  .roommate-detail-container p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .chat-button, .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-button:hover, .back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .back-button {
+    background-color: #6c757d; /* Gray color for back button */
+  }
+  
+  .back-button:hover {
+    background-color: #5a6268;
+  }
+  

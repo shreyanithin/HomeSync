@@ -5,15 +5,17 @@
   
   .title {
     text-align: center;
-    color: #2c3e50;
+    color: #0f161c;
   }
   
   .search-bar {
+    color: rgb(247, 247, 247);
     width: 100%;
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #683d3d;
     border-radius: 4px;
+    background: #402b2e;
   }
   
   .roommate-list {
@@ -24,7 +26,9 @@
   }
   
   .roommate-card {
-    background-color: #f9f9f9;
+    
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 8px;
     width: 300px;
@@ -34,11 +38,11 @@
   .roommate-card h3 {
     margin: 0;
     font-size: 1.2em;
-    color: #333;
+    color: #141414;
   }
   
   .roommate-card p {
     font-size: 1em;
-    color: #555;
+    color: #242424;
   }
   
