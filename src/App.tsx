@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';  // Ensure you have a home component in the `pages` folder
 import RoomieListing from './pages/roomie';  // This imports RoomieListing from roomie.tsx
 import RoommateDetail from './pages/roommate-detail';  // This imports RoommateDetail from roommate-detail.tsx
+import Apartment from './pages/apartment';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,9 @@ const App: React.FC = () => {
 
           {/* Route for RoommateDetail (roommate-detail.tsx) */}
           <Route path="/roommate-detail" element={<RoommateDetail />} />
+
+          <Route path="/apartment" element={<Apartment />} />
+
         </Routes>
       </div>
     </Router>

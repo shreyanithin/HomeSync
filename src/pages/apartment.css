@@ -1,0 +1,172 @@
+
+/* Main container for the apartment page */
+.apartment-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container .btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Grid container for properties */
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .property-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .property-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .property-details {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .property-type{
+    color: #000;
+  }
+   h3{
+    color: #000;
+  }
+  .property-details .typeprice {
+    text-align: center;
+    /*
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;*/
+  }
+  
+  .property-details .property-type {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .property-details .property-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .property-description h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .property-description p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .schedule-visit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .schedule-visit:hover {
+    background-color: #45a049;
+  }
+  
+  /* Pagination styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .pagination .page-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination .page-link:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .pagination .page-link:active {
+    background-color: #45a049;
+  }
+  
+  /* Add responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .property-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .pagination {
+      flex-direction: column;
+    }
+  }
+  
+
