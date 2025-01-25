@@ -183,4 +183,66 @@
     }
   }
   
+  .schedule-visit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .schedule-visit.scheduled {
+    background-color: red;
+  }
+  
+  .schedule-container {
+    margin-top: 10px;
+  }
 
+  .schedule-row {
+    margin-bottom: 10px;
+  }
+  .schedule-row p{
+    color: #000;
+  }
+
+  /* Style for the select box itself */
+select {
+    background-color: #f0f0f0;  /* Light grey background */
+    color: #333;                /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  /* Style for each option in the select dropdown */
+  select option {
+    background-color: #fff;  /* White background for options */
+    color: #333;              /* Text color */
+  }
+  
+  /* Hover effect on options */
+  select option:hover {
+    background-color: #d1d1d1;  /* Grey background on hover */
+  }
+/* Styling for the date input field */
+input[type="date"] {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; /* Make it take the full width of its container */
+  }
+  
+  /* When the input field is focused (clicked) */
+  input[type="date"]:focus {
+    background-color: #e0e0e0; /* Slightly darker grey */
+    border: 1px solid #007bff;  /* Blue border */
+    outline: none; /* Remove default focus outline */
+  }
+    
+    
