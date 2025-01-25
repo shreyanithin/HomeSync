@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './roommate-detail.css';
 
 interface RoommateDetailProps {
   name: string;

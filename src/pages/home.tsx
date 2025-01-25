@@ -3,8 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './home.css';
 
-//import Apartment from './pages/Apartment';  // Correct path to Apartment component
-//import RoomieListing from './pages/roomie';
+// import Apartment from './pages/Apartment';  // Correct path to Apartment component
+// import RoomieListing from './pages/roomie';
 
 
 const Home: React.FC = () => {
