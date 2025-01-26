@@ -1,13 +1,16 @@
 // src/components/Signup.tsx
 import React from 'react';
 import styles from './Signup.module.css';
+import { useNavigate } from 'react-router-dom';
 
 interface SignupProps {
   onSubmit: (data: { username: string; email: string; password: string; phoneNumber: string; gender: string }) => void;
 }
 
 const Signup: React.FC<SignupProps> = ({ onSubmit }) => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const username = formData.get('username') as string;
@@ -16,11 +19,30 @@ const Signup: React.FC<SignupProps> = ({ onSubmit }) => {
     const phoneNumber = formData.get('phoneNumber') as string;
     const gender = formData.get('gender') as string;
 
-    onSubmit({ username, email, password, phoneNumber, gender });
+    console.log('Form data:', { username, email, password, phoneNumber, gender });
+
+    try {
+      const response = await fetch('http://localhost:3001/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, email, password, phoneNumber, gender })
+      });
+
+      if (response.ok) {
+        navigate('/login');
+      } else {
+        const errorResponse = await response.json();
+        alert('Error signing up: ' + errorResponse.error);
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+    }
   };
 
   return (
-    <div className={styles.homebg }>
+    <div className={styles.homebg}>
         <div>
       <h1 className={styles.homeh1}>Signup</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
