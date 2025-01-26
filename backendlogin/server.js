@@ -5,7 +5,7 @@ const cors = require('cors');
 const { Sequelize, DataTypes } = require('sequelize');
 
 // Initialize Sequelize with MySQL
-const sequelize = new Sequelize('testdb', 'root', 'nandana', {
+const sequelize = new Sequelize('testdb', 'root', 'Shreya@2004', {
   host: 'localhost',
   dialect: 'mysql'
 });
