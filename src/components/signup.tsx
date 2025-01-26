@@ -2,6 +2,8 @@
 import React from 'react';
 import styles from './Signup.module.css';
 import { useNavigate } from 'react-router-dom';
+import Navigation from '../components/navigation'
+
 
 interface SignupProps {
   onSubmit: (data: { username: string; email: string; password: string; phoneNumber: string; gender: string }) => void;
@@ -43,6 +45,9 @@ const Signup: React.FC<SignupProps> = ({ onSubmit }) => {
 
   return (
     <div className={styles.homebg}>
+        <div>    
+        <Navigation showLoginButton={false}/>
+        
         <div>
       <h1 className={styles.homeh1}>Signup</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -73,6 +78,7 @@ const Signup: React.FC<SignupProps> = ({ onSubmit }) => {
         </div>
         <button type="submit">Sign Up</button>
       </form>
+    </div>
     </div>
     </div>
   );

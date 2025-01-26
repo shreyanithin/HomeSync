@@ -6,27 +6,16 @@ import RoommateListings from './pages/roomie';  // Roommate listing page
 import RoommateDetail from './pages/roommate-detail';  // Roommate detail page
 import ChatPage from './pages/ChatPage';  // Chat page
 
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import OpenPage from './pages/open';
 import LoginPage from './pages/loginpage';
 import SignupPage from './pages/signuppage';
-import Navigation from './components/navigation';
 
 
-const NavigationWrapper: React.FC = () => {
-  const location = useLocation();
-  const isLoginPage = location.pathname === '/login';
-  const isSignupPage = location.pathname === '/signup';
-
-  return (
-    <Navigation showLoginButton={!isLoginPage && !isSignupPage} />
-  );
-};
 
 const App: React.FC = () => {
   return (
     <Router>
-      <NavigationWrapper/>
       <Routes>
         {/* Route for Home Page */}
         <Route path="/" element={<OpenPage />} />

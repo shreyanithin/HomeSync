@@ -2,6 +2,9 @@
 import React from 'react';
 import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Navigation from '../components/navigation'
+
+
 
 interface LoginProps {
   onSubmit: (data: { username: string; password: string }) => void;
@@ -36,6 +39,8 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
   };
 
   return (
+    <div>
+    <Navigation showLoginButton={false}/>
     <div className={styles.homebg}>
       <div>
       <h1 className={styles.logo}>HomeSync</h1>
@@ -57,7 +62,7 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
         </form>
     </div>
     
-    
+    </div>
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './apartment.css';
+import Navigation from '../components/navigation2';
+
 
 import villa1 from '../assets/pg3v1.jpg';
 import villa2 from '../assets/pg3v2.jpg';
@@ -150,6 +152,8 @@ const Apartment: React.FC = () => {
     : properties.filter((property) => property.Type === selectedType);
 
   return (
+    <div>
+          <Navigation/>
     <div className="apartment-container">
       <div className="header">
         <h1>Properties</h1>
@@ -228,6 +232,7 @@ const Apartment: React.FC = () => {
             </div>
           );
         })}
+      </div>
       </div>
     </div>
   );

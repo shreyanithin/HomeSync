@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './roomie.css';
+import Navigation from '../components/navigation2';
+
 
 interface Roommate {
   name: string;
@@ -60,6 +62,8 @@ const RoomieListing: React.FC = () => {
   };
 
   return (
+    <div>    
+    <Navigation/>
     <div className="roommate-listing-container">
       <h1 className="title">Find a Roommate</h1>
       <input 
@@ -89,6 +93,7 @@ const RoomieListing: React.FC = () => {
           <p>No roommates found. Try a different search query.</p>
         )}
       </div>
+    </div>
     </div>
   );
 };
