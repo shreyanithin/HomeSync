@@ -1,11 +1,7 @@
-// src/Home.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './home.css';
-
-// import Apartment from './pages/Apartment';  // Correct path to Apartment component
-// import RoomieListing from './pages/roomie';
-
+import userImage from '../assets/user.png';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -19,9 +15,16 @@ const Home: React.FC = () => {
       {/* Button to navigate to Apartment page */}
       <button className="navigate-btn" onClick={() => navigate('/apartment')}>
         Find an Apartment
-      </button>
+      </button><br /><br />
+
+      {/* Profile Icon to navigate to Profile Page */}
+      <div className="profile-icon" onClick={() => navigate('/profile')}>
+      <img src={userImage} alt="Profile" className="profile-image" />
+      <p>User Details</p>
+      </div>
     </div>
   );
 };
 
 export default Home;
+

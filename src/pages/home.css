@@ -38,4 +38,13 @@ body{
     display: flex;
     justify-content: space-between;
   }
+  .profile-image{
+    width: 50px;   /* Adjust width */
+    height: 50px;
+  }
+  .profile-icon{
+    display: flex;
+    padding: 20px;
+    color: black;
+  }
   
