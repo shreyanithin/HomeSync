@@ -11,7 +11,7 @@
 - ⚛️ **React** – UI development.  
 - 📜 **TypeScript** – Static typing for maintainability.  
 - ⚡ **Vite** – Fast build tool.  
-- 💄 **Tailwind CSS** – Styling framework.  
+- 💄 **CSS** – Styling framework.  
 
 ### **Backend**  
 - 🚀 **Node.js** – Server-side runtime.  
